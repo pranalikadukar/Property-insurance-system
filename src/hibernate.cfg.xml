@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-5.3.dtd"> 
+          
+          
+<hibernate-configuration>
+
+<session-factory>  
+        <property name="hbm2ddl.auto">update</property>  
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>  
+        <property name="connection.url">jdbc:mysql://localhost:3306/user_detail</property>  
+        <property name="connection.username">root</property>  
+        <property name="connection.password">abc123</property>  
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>  
+ 
+    <mapping class="model.User"/>  
+     <mapping class="model.Contact"/>  
+     <mapping class="model.Quotation"/> 
+      <mapping class="model.Property"/>
+ </session-factory>  
+
+</hibernate-configuration> 
